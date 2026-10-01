@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  /* Matches the white background of the maintenance artwork, so the area
+     around the portrait image blends in and reads as one full-screen page. */
+  background-color: #ffffff;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Centres the artwork in the viewport at every screen size. */
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.maintenance-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100vh;
+  max-height: 100svh;
+  /* The artwork is 1024x1536 (portrait). Scaling it down with max-width /
+     max-height keeps the whole design visible and readable instead of
+     cropping the headline and the "Thank you for your patience!" line.
+     To fill the screen edge to edge instead (cropping top and bottom on
+     wide monitors), add: object-fit: cover; height: 100%; */
+}
